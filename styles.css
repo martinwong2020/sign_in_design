@@ -1,0 +1,166 @@
+body{
+    height:100vh;
+    width:100vw;
+    background: url("./img/background.jpeg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.sign_in_container{
+    width:500px;
+    height:300px;
+    background-color: black;
+    border-radius: 20px;
+    border:solid 5px black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.sign_in_container:hover{
+    /* box-shadow: 0px 0px 100px rgb(180, 81, 180); */
+    animation: hover_flicker 5s infinite;
+}
+@keyframes hover_flicker{
+    0% {
+        box-shadow: 0px 0px 200px rgba(180, 81, 180, 0.1);
+    }
+
+    5% {
+        box-shadow: 0px 0px 200px rgba(180, 81, 180,0.5);
+    }
+    7% {
+        box-shadow: 0px 0px 200px rgb(180, 81, 180,1);
+    }
+    9.9%{
+        box-shadow: 0px 0px 200px rgba(180, 81, 180,0);
+    }
+    10% {
+        box-shadow: 0px 0px 200px rgb(255, 255, 94, 0.1);
+    }
+    50% {
+        box-shadow: 0px 0px 200px rgb(255, 255, 94, 1);
+    }
+    55%{
+      box-shadow: 0px 0px 200px rgb(255, 255, 94, 0.1);
+    }
+    57%{
+        box-shadow: 0px 0px 200px rgb(255, 255, 94, 0);
+    }
+    80% {
+        box-shadow: 0px 0px 200px rgba(82, 238, 67, 0.8);
+    }
+    85% {
+        box-shadow: 0px 0px 200px rgb(82, 238, 67,1);
+    }
+    100%{
+        box-shadow: 0px 0px 200px rgb(82, 238, 67,0);
+    }
+}
+button{
+    height:55px;
+    width:200px;
+    color:hsl(317,100%,54%);
+    border-radius: 10px;
+    border:rgb(203, 232, 255) 3px solid;
+    background-color: transparent;
+    box-shadow:inset 0px 0px 20px rgb(52, 151, 238), 0px 0px 30px rgb(52, 151, 238);
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation: border-flicker 2s infinite;
+}
+button:hover{
+    box-shadow:none;
+    background-color: transparent;
+    color:white;
+    animation:none;
+    border:white 3px solid;
+}
+@keyframes border-flicker {
+    0% {
+      opacity: 0.1;
+    }
+    2% {
+      opacity: 1;
+    }
+    4% {
+      opacity: 0.1;
+    }
+  
+    8% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .one_flicker{
+    animation:type_one_flicker infinite 2s;
+  }
+  .two_flicker{
+    animation:type_one_flicker infinite 1.5s;
+  }
+  .three_flicker{
+    animation:type_one_flicker infinite 1s;
+  }
+  @keyframes type_one_flicker{
+    0% {
+        opacity: .1;
+    }
+    
+    5% {
+        opacity: .5;
+    }
+    7% {
+        opacity: 1;
+    }
+    10% {
+        opacity: .1;
+    }
+    70% {
+        opacity: 1;
+    }
+    90% {
+        opacity: .8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.input_container{
+    position:relative;
+    background-color: transparent;
+    height:55px;
+    width:200px;
+    border-bottom: 2px white solid;
+}
+input{
+    height:50%;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    background-color: transparent;
+    border:none;
+    color:white;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline:none;
+}
+@media only screen and (max-width:600px){
+    .sign_in_container{
+        width:250px;
+        height:200px;
+    }
+    button{
+        height:35px;
+        width:100px;
+    }
+}
