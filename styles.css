@@ -73,6 +73,7 @@ button{
     font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     animation: border-flicker 2s infinite;
+    cursor: pointer;
 }
 button:hover{
     box-shadow:none;
@@ -80,6 +81,9 @@ button:hover{
     color:white;
     animation:none;
     border:white 3px solid;
+}
+button:active{
+    transform: scale(0.95);
 }
 @keyframes border-flicker {
     0% {
@@ -136,7 +140,10 @@ button:hover{
     }
 }
 .input_container{
-    position:relative;
+    /* position:relative; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     background-color: transparent;
     height:55px;
     width:200px;
@@ -145,7 +152,7 @@ button:hover{
 input{
     height:50%;
     width:100%;
-    position:absolute;
+    /* position:absolute; */
     bottom:0;
     background-color: transparent;
     border:none;
